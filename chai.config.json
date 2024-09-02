@@ -1,0 +1,11 @@
+{
+    "bodyFont": "Inter",
+    "headingFont": "Montserrat",
+    "roundedCorners": 10,
+    "primaryColor": "#fcba03",
+    "secondaryColor": "#f002b8",
+    "bodyBgDarkColor": "#000",
+    "bodyBgLightColor": "#fcfcfc",
+    "bodyTextDarkColor": "#ffffff",
+    "bodyTextLightColor": "#000000"
+}
