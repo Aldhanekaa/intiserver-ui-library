@@ -184,7 +184,6 @@ const generatePreviews = async () => {
     const { html, wrapperClasses, width, height } = await readHtmlFile(blockFile);
     const htmlContent = wrapInsideHtml(`<div id="root" class="${wrapperClasses}">${html}</div>`);
 
-    console.log(width, height);
     // Set the viewport size to 1280px width
     await page.setViewport({ width, height });
     // Set the content of the page
@@ -217,7 +216,7 @@ const generatePreviews = async () => {
 
       // Optimize and save the image
       let optimizedBuffer = await sharp(screenshotBuffer)
-        .resize({ width: 800, height: 800, fit: "inside" })
+        .resize({ width, height, fit: "inside" })
         .jpeg({ quality: 100 })
         .toBuffer();
 
