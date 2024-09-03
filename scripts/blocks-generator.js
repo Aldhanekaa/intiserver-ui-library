@@ -62,7 +62,7 @@ const createJSONFile = (folderPath, outputFileName) => {
           uuid: uuid,
           name: humanize(file.name),
           preview: `/preview/${file.group}-${file.name}.jpg`,
-          ...omit(jsonObject, ["group", "uuid"]),
+          ...omit(jsonObject, ["group", "uuid", "previewWrapperClasses", "viewport"]),
         };
       }
       return null;

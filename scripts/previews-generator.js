@@ -1,9 +1,13 @@
 import fs from "fs/promises";
 import path from "path";
+import { load } from "js-yaml";
 import puppeteer from "puppeteer";
 import sharp from "sharp";
 import { execSync } from "child_process";
 import getPalette from "tailwindcss-palette-generator";
+import pkg from "lodash";
+
+const { get } = pkg;
 
 // Read JSON file
 const readJsonFile = async (filePath) => {
@@ -19,26 +23,44 @@ const outputDir = "./public/preview";
 const blocksDir = "./src/blocks";
 
 // Function to get modified files from git
-function getModifiedFiles() {
+function getModifiedAndNewFiles() {
   try {
-    const gitOutput = execSync("git diff --name-only HEAD").toString().trim();
-    return gitOutput
+    // Get modified files
+    const modifiedFiles = execSync("git diff --name-only HEAD").toString().trim();
+    
+    // Get untracked (new) files
+    const newFiles = execSync("git ls-files --others --exclude-standard").toString().trim();
+    
+    // Combine and filter the results
+    const allFiles = `${modifiedFiles}\n${newFiles}`;
+    return allFiles
       .split("\n")
-      .filter(
-        (file) => file.startsWith("src/blocks/") && file.endsWith(".html"),
-      );
+      .filter(file => file.startsWith("src/blocks/") && file.endsWith(".html"))
+      .filter(Boolean); // Remove any empty strings
   } catch (error) {
-    console.error("Error getting modified files from git:", error);
+    console.error("Error getting modified and new files from git:", error);
     return [];
   }
 }
 
 
-
+// Function to extract JSON object from <chaistudio> tag
+const extractJSONObject = (htmlContent) => {
+  const blockMeta = htmlContent.match(/---([\s\S]*?)---/);
+  if (blockMeta) {
+    try {
+      return load(blockMeta[1]);
+    } catch (er) {}
+  }
+  return {};
+};
 // Read HTML file
 const readHtmlFile = async (filePath) => {
   const htmlContent = await fs.readFile(filePath, "utf-8");
-  return htmlContent.replace(/---([\s\S]*?)---/g, ""); 
+  const metaData = extractJSONObject(htmlContent);
+  const html = htmlContent.replace(/---([\s\S]*?)---/g, ""); 
+  const wrapperClasses = get(metaData, "previewWrapperClasses", "");
+  return { html, wrapperClasses, ...getViewport(metaData) };
 };
 
 
@@ -98,24 +120,24 @@ const wrapInsideHtml = (html) => {
           darkMode: "class",
           theme: ${getTailwindConfig()},
           plugins: [
-                tailwind.plugin.withOptions(() =>
-                  function ({ addBase, theme }) {
-                      addBase({
-                      "h1,h2,h3,h4,h5,h6": {
-                          fontFamily: theme("fontFamily.heading"),
-                      },
-                      body: {
-                          fontFamily: theme("fontFamily.body"),
-                          color: theme("colors.text-light"),
-                          backgroundColor: theme("colors.bg-light"),
-                      },
-                      ".dark body": {
-                          color: theme("colors.text-dark"),
-                          backgroundColor: theme("colors.bg-dark"),
-                      },
-                    });
-                  }
-              )
+            tailwind.plugin.withOptions(() =>
+              function ({ addBase, theme }) {
+                addBase({
+                  "h1,h2,h3,h4,h5,h6": {
+                    fontFamily: theme("fontFamily.heading"),
+                  },
+                  body: {
+                      fontFamily: theme("fontFamily.body"),
+                      color: theme("colors.text-light"),
+                      backgroundColor: theme("colors.bg-light"),
+                  },
+                  ".dark body": {
+                      color: theme("colors.text-dark"),
+                      backgroundColor: theme("colors.bg-dark"),
+                  },
+                });
+              }
+            )
           ],
         }
       </script>
@@ -126,10 +148,18 @@ const wrapInsideHtml = (html) => {
   </html>`;
 }
 
+const getViewport = (data) => {
+  const viewport = get(data, "viewport", {}); 
+  return {
+    width: get(viewport, "width", 1280),
+    height: get(viewport, "height", 800),
+  };
+}
+
 // Main function
 const generatePreviews = async () => {
   const data = await readJsonFile(jsonFilePath);
-  const modifiedFiles = getModifiedFiles();
+  const modifiedFiles = getModifiedAndNewFiles();
 
   // Launch Puppeteer
   const browser = await puppeteer.launch({
@@ -137,9 +167,6 @@ const generatePreviews = async () => {
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
-
-  // Set the viewport size to 1280px width
-  await page.setViewport({ width: 1280, height: 800 });
 
   // Loop through each block in the JSON data
   for (let block of data) {
@@ -154,8 +181,12 @@ const generatePreviews = async () => {
     console.log("Generating preview for:" + uuid + ".html");
 
     // Read the HTML file
-    const htmlContent = wrapInsideHtml(`<div id="root">${await readHtmlFile(blockFile)}</div>`);
+    const { html, wrapperClasses, width, height } = await readHtmlFile(blockFile);
+    const htmlContent = wrapInsideHtml(`<div id="root" class="${wrapperClasses}">${html}</div>`);
 
+    console.log(width, height);
+    // Set the viewport size to 1280px width
+    await page.setViewport({ width, height });
     // Set the content of the page
     await page.setContent(htmlContent, { waitUntil: "networkidle0" });
 

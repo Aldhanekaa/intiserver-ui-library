@@ -1,9 +1,21 @@
 [
   {
+    "group": "buttons",
+    "uuid": "buttons-solid-button",
+    "name": "Solid button",
+    "preview": "/preview/buttons-solid-button.jpg"
+  },
+  {
     "group": "hero",
     "uuid": "hero-hero-2",
-    "name": "Demo Name of block",
-    "preview": "/preview/do-pick-this.jpg"
+    "name": "Hero Simple with 2 buttons",
+    "preview": "/preview/hero-hero-2.jpg",
+    "tags": [
+      "hero",
+      "simple",
+      "buttons"
+    ],
+    "description": "A simple hero section with two buttons"
   },
   {
     "group": "hero",
