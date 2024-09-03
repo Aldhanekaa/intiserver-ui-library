@@ -2,18 +2,21 @@
   {
     "group": "buttons",
     "uuid": "buttons-outline",
+    "path": "buttons/outline.html",
     "name": "Outline",
     "preview": "/preview/buttons-outline.jpg"
   },
   {
     "group": "buttons",
     "uuid": "buttons-solid",
+    "path": "buttons/solid.html",
     "name": "Solid",
     "preview": "/preview/buttons-solid.jpg"
   },
   {
     "group": "hero",
     "uuid": "hero-hero-simple-with-2-buttons",
+    "path": "hero/hero-simple-with-2-buttons.html",
     "name": "Hero Simple with 2 buttons",
     "preview": "/preview/hero-hero-simple-with-2-buttons.jpg",
     "tags": [
@@ -26,6 +29,7 @@
   {
     "group": "hero",
     "uuid": "hero-simple-hero-section",
+    "path": "hero/simple-hero-section.html",
     "name": "Simple hero section",
     "preview": "/preview/hero-simple-hero-section.jpg"
   }
