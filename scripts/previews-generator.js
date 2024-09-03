@@ -20,7 +20,7 @@ const config = await readJsonFile('./chai.config.json');
 // Path to your JSON file and directories
 const jsonFilePath = "./public/blocks.json";
 const outputDir = "./public/preview";
-const blocksDir = "./src/blocks";
+const blocksDir = "./public/blocks";
 
 // Function to get modified files from git
 function getModifiedAndNewFiles() {
@@ -35,7 +35,7 @@ function getModifiedAndNewFiles() {
     const allFiles = `${modifiedFiles}\n${newFiles}`;
     return allFiles
       .split("\n")
-      .filter(file => file.startsWith("src/blocks/") && file.endsWith(".html"))
+      .filter(file => file.startsWith("public/blocks/") && file.endsWith(".html"))
       .filter(Boolean); // Remove any empty strings
   } catch (error) {
     console.error("Error getting modified and new files from git:", error);

@@ -29,7 +29,7 @@ const readHTMLFiles = (folderPath) => {
 
 // Function to extract JSON object from <chaistudio> tag
 const extractJSONObject = (block) => {
-  const htmlContent = fs.readFileSync("./src/blocks/"+ block.group + "/" + block.path, "utf-8");
+  const htmlContent = fs.readFileSync("./public/blocks/"+ block.group + "/" + block.path, "utf-8");
   const blockMeta = htmlContent.match(/---([\s\S]*?)---/);
   if (blockMeta) {
     try {
@@ -74,7 +74,7 @@ const createJSONFile = (folderPath, outputFileName) => {
 };
 
 // Specify the folder path and output file name
-const folderPath = "./src/blocks";
+const folderPath = "./public/blocks";
 const outputFileName = "./public/blocks.json";
 
 // Create the JSON file
