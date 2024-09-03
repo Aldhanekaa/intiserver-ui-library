@@ -1,0 +1,14 @@
+[
+  {
+    "group": "hero",
+    "uuid": "hero-hero-2",
+    "name": "Demo Name of block",
+    "preview": "/preview/do-pick-this.jpg"
+  },
+  {
+    "group": "hero",
+    "uuid": "hero-simple-hero-section",
+    "name": "Simple hero section",
+    "preview": "/preview/hero-simple-hero-section.jpg"
+  }
+]
