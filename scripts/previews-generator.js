@@ -146,6 +146,7 @@ const wrapInsideHtml = (html) => {
     </head>
     <body>
       ${html}
+      <script src="https://unpkg.com/alpinejs" defer ></script>
     </body>
   </html>`;
 };
@@ -184,9 +185,9 @@ const generatePreviews = async () => {
       group,
       `${uuid.replace(group + "-", "")}.html`,
     );
-    // if (!modifiedFiles.includes(blockFile)) {
-    //   continue;
-    // }
+    if (!modifiedFiles.includes(blockFile)) {
+      continue;
+    }
 
     console.log("Generating preview for:" + uuid + ".html");
 
@@ -200,7 +201,7 @@ const generatePreviews = async () => {
     // Set the viewport size to 1280px width
     await page.setViewport({ width, height });
     // Set the content of the page
-    await page.setContent(htmlContent, { waitUntil: "networkidle0" });
+    await page.setContent(htmlContent, { waitUntil: "load" });
 
     // Wait for any dynamic content to load
     await page.evaluate(
