@@ -1,8 +1,10 @@
 import "./chaibuilder.tailwind.css";
 import "@chaibuilder/sdk/styles";
-import "@chaibuilder/sdk/web-blocks";
+import { loadWebBlocks } from "@chaibuilder/sdk/web-blocks";
 import { ChaiBlock, ChaiBuilderEditor } from "@chaibuilder/sdk";
 import { getBlocksFromHTML } from "@chaibuilder/sdk/lib";
+
+loadWebBlocks();
 
 const Logo = () => {
   return (
