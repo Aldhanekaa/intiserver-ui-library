@@ -3,29 +3,9 @@ import "@chaibuilder/sdk/styles";
 import { loadWebBlocks } from "@chaibuilder/sdk/web-blocks";
 import { ChaiBlock, ChaiBuilderEditor } from "@chaibuilder/sdk";
 import { getBlocksFromHTML } from "@chaibuilder/sdk/lib";
+import { Logo } from "./ChaiUILogo.tsx";
 
 loadWebBlocks();
-
-const Logo = () => {
-  return (
-    <a
-      href="https://chaibuilder.com"
-      target="_blank"
-      className="flex-none rounded-xl font-semibold focus:outline-none focus:opacity-80 flex items-center"
-      aria-label="Chai Builder"
-    >
-      <img
-        className="w-[30px] h-[30px] rounded-md lg:w-[30px] lg:h-[30px] xl:w-[30px]"
-        src="https://fldwljgzcktqnysdkxnn.supabase.co/storage/v1/object/public/chaibuilder-blob-storage/175ac8d8-37fe-4707-bb4a-3c0cd6a6db75/gVH7O-Ir_400x400.png"
-        alt=""
-        loading="lazy"
-        height=""
-        width=""
-      />
-      <h2 className="text-xl tracking-tight ml-1">Chai UI Library Builder</h2>
-    </a>
-  );
-};
 
 function Builder() {
   return (

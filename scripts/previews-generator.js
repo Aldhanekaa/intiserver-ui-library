@@ -185,9 +185,9 @@ const generatePreviews = async () => {
       group,
       `${uuid.replace(group + "-", "")}.html`,
     );
-    if (!modifiedFiles.includes(blockFile)) {
-      continue;
-    }
+    // if (!modifiedFiles.includes(blockFile)) {
+    //   continue;
+    // }
 
     console.log("Generating preview for:" + uuid + ".html");
 

@@ -7,9 +7,9 @@ viewport:
     <div class="hs-accordion active" id="hs-basic-heading-one">
         <button
             x-on:click="currentOpenIndex = currentOpenIndex === 0 ? -1 : 0"
-            class="py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start  focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+            class="py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start  focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-primary-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
             aria-expanded="currentOpenIndex === 0"
-            :class="currentOpenIndex === 0 ? 'text-blue-600' : 'text-gray-800 hover:text-gray-500'"
+            :class="currentOpenIndex === 0 ? 'text-primary-600' : 'text-gray-800 hover:text-gray-500'"
             aria-controls="hs-basic-collapse-one">
             <svg x-show="currentOpenIndex !== 0" class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
                 height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -40,9 +40,9 @@ viewport:
     <div class="hs-accordion" id="hs-basic-heading-two">
         <button
             x-on:click="currentOpenIndex = currentOpenIndex === 1 ? -1 : 1"
-            class="py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start hover:text-gray-500 focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-blue-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
+            class="py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-primary-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
             aria-expanded="currentOpenIndex === 0"
-            :class="{currentOpenIndex === 1 ? 'text-blue-600' : 'text-gray-800'}"
+            :class="{currentOpenIndex === 1 ? 'text-primary-600' : 'text-gray-800 hover:text-gray-500'}"
             aria-controls="hs-basic-collapse-two">
             <svg x-show="currentOpenIndex !== 1" class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
                 height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
