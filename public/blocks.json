@@ -1,36 +1,44 @@
 [
   {
+    "group": "accordion",
+    "uuid": "accordion-simple-accordion",
+    "path": "accordion/simple-accordion.html",
+    "name": "Simple accordion",
+    "preview": "/preview/accordion/accordion-simple-accordion.jpg"
+  },
+  {
     "group": "buttons",
     "uuid": "buttons-outline",
     "path": "buttons/outline.html",
     "name": "Outline",
-    "preview": "/preview/buttons-outline.jpg"
+    "preview": "/preview/buttons/buttons-outline.jpg"
   },
   {
     "group": "buttons",
     "uuid": "buttons-solid",
     "path": "buttons/solid.html",
     "name": "Solid",
-    "preview": "/preview/buttons-solid.jpg"
+    "preview": "/preview/buttons/buttons-solid.jpg"
   },
   {
-    "group": "hero",
-    "uuid": "hero-hero-simple-with-2-buttons",
-    "path": "hero/hero-simple-with-2-buttons.html",
-    "name": "Hero Simple with 2 buttons",
-    "preview": "/preview/hero-hero-simple-with-2-buttons.jpg",
-    "tags": [
-      "hero",
-      "simple",
-      "buttons"
-    ],
-    "description": "A simple hero section with two buttons"
+    "group": "buttons",
+    "uuid": "buttons-with-icon",
+    "path": "buttons/with-icon.html",
+    "name": "With icon",
+    "preview": "/preview/buttons/buttons-with-icon.jpg"
   },
   {
-    "group": "hero",
-    "uuid": "hero-simple-hero-section",
-    "path": "hero/simple-hero-section.html",
-    "name": "Simple hero section",
-    "preview": "/preview/hero-simple-hero-section.jpg"
+    "group": "layouts",
+    "uuid": "layouts-2-col-row",
+    "path": "layouts/2-col-row.html",
+    "name": "2 col row",
+    "preview": "/preview/layouts/layouts-2-col-row.jpg"
+  },
+  {
+    "group": "layouts",
+    "uuid": "layouts-container",
+    "path": "layouts/container.html",
+    "name": "Container",
+    "preview": "https://preview.coom"
   }
 ]

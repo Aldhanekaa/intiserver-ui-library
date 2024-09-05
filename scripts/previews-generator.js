@@ -15,7 +15,7 @@ const readJsonFile = async (filePath) => {
   return JSON.parse(data);
 };
 
-const config = await readJsonFile('./chai.config.json');
+const config = await readJsonFile("./chai.config.json");
 
 // Path to your JSON file and directories
 const jsonFilePath = "./public/blocks.json";
@@ -26,23 +26,28 @@ const blocksDir = "./public/blocks";
 function getModifiedAndNewFiles() {
   try {
     // Get modified files
-    const modifiedFiles = execSync("git diff --name-only HEAD").toString().trim();
-    
+    const modifiedFiles = execSync("git diff --name-only HEAD")
+      .toString()
+      .trim();
+
     // Get untracked (new) files
-    const newFiles = execSync("git ls-files --others --exclude-standard").toString().trim();
-    
+    const newFiles = execSync("git ls-files --others --exclude-standard")
+      .toString()
+      .trim();
+
     // Combine and filter the results
     const allFiles = `${modifiedFiles}\n${newFiles}`;
     return allFiles
       .split("\n")
-      .filter(file => file.startsWith("public/blocks/") && file.endsWith(".html"))
+      .filter(
+        (file) => file.startsWith("public/blocks/") && file.endsWith(".html"),
+      )
       .filter(Boolean); // Remove any empty strings
   } catch (error) {
     console.error("Error getting modified and new files from git:", error);
     return [];
   }
 }
-
 
 // Function to extract JSON object from <chaistudio> tag
 const extractJSONObject = (htmlContent) => {
@@ -58,11 +63,10 @@ const extractJSONObject = (htmlContent) => {
 const readHtmlFile = async (filePath) => {
   const htmlContent = await fs.readFile(filePath, "utf-8");
   const metaData = extractJSONObject(htmlContent);
-  const html = htmlContent.replace(/---([\s\S]*?)---/g, ""); 
+  const html = htmlContent.replace(/---([\s\S]*?)---/g, "");
   const wrapperClasses = get(metaData, "previewWrapperClasses", "");
   return { html, wrapperClasses, ...getViewport(metaData) };
 };
-
 
 const getFonts = (options) => {
   const headingFont = options.headingFont;
@@ -76,35 +80,33 @@ const getFonts = (options) => {
   `;
 };
 
-
 const getTailwindConfig = () => {
+  const palette = getPalette.default([
+    { color: config.primaryColor, name: "primary" },
+    { color: config.secondaryColor, name: "secondary" },
+  ]);
 
-    const palette = getPalette.default([
-        { color: config.primaryColor, name: "primary" },
-        { color: config.secondaryColor, name: "secondary" },
-    ]);
+  const colors = {
+    "bg-light": config.bodyBgLightColor,
+    "bg-dark": config.bodyBgDarkColor,
+    "text-dark": config.bodyTextDarkColor,
+    "text-light": config.bodyTextLightColor,
+  };
 
-    const colors = {
-        "bg-light": config.bodyBgLightColor,
-        "bg-dark": config.bodyBgDarkColor,
-        "text-dark": config.bodyTextDarkColor,
-        "text-light": config.bodyTextLightColor,
-    };
-
-    return JSON.stringify({
-        extend: {
-            container: {
-                center: true,
-                padding: "1rem",
-                screens: {
-                    "2xl": "1300px",
-                },
-            },
-            fontFamily: { heading: [config.headingFont], body: [config.bodyFont] },
-            borderRadius: { DEFAULT: `${config.roundedCorners}px` },
-            colors: { ...palette, ...colors },
+  return JSON.stringify({
+    extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          "2xl": "1300px",
         },
-    });
+      },
+      fontFamily: { heading: [config.headingFont], body: [config.bodyFont] },
+      borderRadius: { DEFAULT: `${config.roundedCorners}px` },
+      colors: { ...palette, ...colors },
+    },
+  });
 };
 
 const wrapInsideHtml = (html) => {
@@ -146,15 +148,15 @@ const wrapInsideHtml = (html) => {
       ${html}
     </body>
   </html>`;
-}
+};
 
 const getViewport = (data) => {
-  const viewport = get(data, "viewport", {}); 
+  const viewport = get(data, "viewport", {});
   return {
     width: get(viewport, "width", 1280),
     height: get(viewport, "height", 800),
   };
-}
+};
 
 // Main function
 const generatePreviews = async () => {
@@ -170,19 +172,30 @@ const generatePreviews = async () => {
 
   // Loop through each block in the JSON data
   for (let block of data) {
-    const { group, uuid } = block;
+    const { group, uuid, preview } = block;
 
-    // Check if the file has been modified
-    const blockFile = path.join(blocksDir, group, `${uuid.replace(group + '-', "")}.html`);
-    if (!modifiedFiles.includes(blockFile)) {
+    if (preview.startsWith("http")) {
       continue;
     }
+
+    // // Check if the file has been modified
+    const blockFile = path.join(
+      blocksDir,
+      group,
+      `${uuid.replace(group + "-", "")}.html`,
+    );
+    // if (!modifiedFiles.includes(blockFile)) {
+    //   continue;
+    // }
 
     console.log("Generating preview for:" + uuid + ".html");
 
     // Read the HTML file
-    const { html, wrapperClasses, width, height } = await readHtmlFile(blockFile);
-    const htmlContent = wrapInsideHtml(`<div id="root" class="${wrapperClasses}">${html}</div>`);
+    const { html, wrapperClasses, width, height } =
+      await readHtmlFile(blockFile);
+    const htmlContent = wrapInsideHtml(
+      `<div id="root" class="${wrapperClasses}">${html}</div>`,
+    );
 
     // Set the viewport size to 1280px width
     await page.setViewport({ width, height });
@@ -205,14 +218,11 @@ const generatePreviews = async () => {
       const screenshotBuffer = await rootElement.screenshot();
 
       // Ensure the output directory exists
-      const groupOutputDir = path.join(outputDir);
+      const groupOutputDir = path.join(outputDir, group);
       await fs.mkdir(groupOutputDir, { recursive: true });
 
       // Define the output file path
-      const outputFilePath = path.join(
-        groupOutputDir,
-        `${uuid}.jpg`,
-      );
+      const outputFilePath = path.join(groupOutputDir, `${uuid}.jpg`);
 
       // Optimize and save the image
       let optimizedBuffer = await sharp(screenshotBuffer)

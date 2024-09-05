@@ -13,12 +13,13 @@ const readHTMLFiles = (folderPath) => {
   for (const item of items) {
     if (item.isDirectory()) {
       const subfolderPath = path.join(folderPath, item.name);
-      const subfolderFiles = fs.readdirSync(subfolderPath)
-        .filter(file => path.extname(file).toLowerCase() === ".html")
-        .map(file => ({
+      const subfolderFiles = fs
+        .readdirSync(subfolderPath)
+        .filter((file) => path.extname(file).toLowerCase() === ".html")
+        .map((file) => ({
           path: file,
           group: item.name,
-          name: path.parse(file).name
+          name: path.parse(file).name,
         }));
       results = results.concat(subfolderFiles);
     }
@@ -29,7 +30,10 @@ const readHTMLFiles = (folderPath) => {
 
 // Function to extract JSON object from <chaistudio> tag
 const extractJSONObject = (block) => {
-  const htmlContent = fs.readFileSync("./public/blocks/"+ block.group + "/" + block.path, "utf-8");
+  const htmlContent = fs.readFileSync(
+    "./public/blocks/" + block.group + "/" + block.path,
+    "utf-8",
+  );
   const blockMeta = htmlContent.match(/---([\s\S]*?)---/);
   if (blockMeta) {
     try {
@@ -42,11 +46,13 @@ const extractJSONObject = (block) => {
 // Function to humanize a string
 const humanize = (str) => {
   return str
-    .replace(/([a-z\d])([A-Z])/g, '$1 $2')
-    .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, '$1 $2')
-    .replace(/-/g, ' ')
+    .replace(/([a-z\d])([A-Z])/g, "$1 $2")
+    .replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1 $2")
+    .replace(/-/g, " ")
     .toLowerCase()
-    .replace(/^./, function(m) { return m.toUpperCase(); });
+    .replace(/^./, function (m) {
+      return m.toUpperCase();
+    });
 };
 
 // Main function to create the JSON file
@@ -62,8 +68,13 @@ const createJSONFile = (folderPath, outputFileName) => {
           uuid: uuid,
           path: file.group + "/" + file.name + ".html",
           name: humanize(file.name),
-          preview: `/preview/${file.group}-${file.name}.jpg`,
-          ...omit(jsonObject, ["group", "uuid", "previewWrapperClasses", "viewport"]),
+          preview: `/preview/${file.group}/${file.group + "-" + file.name}.jpg`,
+          ...omit(jsonObject, [
+            "group",
+            "uuid",
+            "previewWrapperClasses",
+            "viewport",
+          ]),
         };
       }
       return null;
