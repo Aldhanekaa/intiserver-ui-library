@@ -1,14 +1,68 @@
-import { Plus } from "lucide-react";
+import { Eye, Plus } from "lucide-react";
 import { useBlocks } from "./useBlocks.ts";
-import { capitalize, filter, uniq } from "lodash";
-import { useState } from "react";
+import { capitalize, filter, isEmpty, uniq } from "lodash";
+import { useEffect, useMemo, useState } from "react";
 import { Logo } from "./ChaiUILogo.tsx";
-import { Link } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import theme from "../chai.config.json";
+import PreviewWeb from "./preview/WebPreview.tsx";
+import { load } from "js-yaml";
+
+export const extractMetadata = (htmlContent: string) => {
+  const blockMeta = htmlContent.match(/---([\s\S]*?)---/);
+  if (blockMeta) {
+    try {
+      return load(blockMeta[1]);
+    } catch (_er) {
+      console.log(_er);
+    }
+  }
+  return {};
+};
+
+const useBlockData = () => {
+  const [params] = useSearchParams();
+  const path = params.get("path") as string;
+  const [html, setHtml] = useState("");
+  useEffect(() => {
+    (async () => {
+      setHtml("");
+      const response = await fetch("/blocks/" + path);
+      const previewHtml = await response.text();
+      setHtml(previewHtml);
+    })();
+  }, [path]);
+
+  const initialContent = useMemo(() => {
+    return html.replace(/---([\s\S]*?)---/g, "");
+  }, [html]);
+
+  const metadata = useMemo(() => {
+    return extractMetadata(html);
+  }, [html]);
+
+  if (isEmpty(html)) return null;
+  const file = path
+    ? path.indexOf("/") !== -1
+      ? path?.split("/").pop()
+      : ""
+    : "";
+  const group = path
+    ? path.indexOf("/") !== -1
+      ? path?.split("/")[0]
+      : path
+    : "";
+  return { initialContent, metadata, group, file, path };
+};
 
 export default function Home() {
   const { data: blocks } = useBlocks();
   const groups = uniq(blocks.map((block) => block.group));
-  const [group, setGroup] = useState(groups[0]);
+  const data = useBlockData();
+
+  const navigate = useNavigate();
+  const group = data?.group || "";
+  console.log(data);
   return (
     <div className="flex flex-col h-screen">
       {/* Topbar */}
@@ -42,6 +96,11 @@ export default function Home() {
               <Plus size={18} className="mr-1" /> Contribute
             </button>
           </a>
+          <a href="/builder">
+            <button className="bg-white text-blue-600 px-3 py-1 rounded flex items-center">
+              <Eye size={18} className="mr-1" /> View in Builder
+            </button>
+          </a>
         </div>
       </div>
 
@@ -49,17 +108,32 @@ export default function Home() {
       <div className="flex flex-1 overflow-hidden">
         {/* Sidebar */}
         <div className="w-64 bg-gray-100 p-4 overflow-y-auto">
-          <ul>
+          <select
+            value={group}
+            onChange={(e) => navigate(`/?path=${e.target.value}`)}
+            className="p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="">Choose a group</option>
             {groups.map((_group, index) => (
-              <li key={index} className="mb-2">
+              <option key={index} value={_group}>
+                {capitalize(_group)}
+              </option>
+            ))}
+          </select>
+          <hr className="py-2" />
+          <ul>
+            {filter(blocks, (block) => block.group === group).map((block) => (
+              <li className="mb-2">
                 <button
-                  onClick={() => setGroup(_group)}
+                  onClick={() => navigate(`/?path=${block.path}`)}
                   className={
                     "hover:underline" +
-                    (_group === group ? " underline text-blue-600" : "")
+                    (block.path === data?.path
+                      ? " underline text-blue-600"
+                      : "")
                   }
                 >
-                  {capitalize(_group)}
+                  {capitalize(block.name)}
                 </button>
               </li>
             ))}
@@ -67,36 +141,15 @@ export default function Home() {
         </div>
 
         {/* Main content area */}
-        <div className="flex-1 p-6 overflow-y-auto">
-          <div className="grid grid-cols-3 gap-6">
-            {filter(blocks, (block) => block.group === group).map(
-              (card, index) => (
-                <Link
-                  key={index}
-                  to={`/preview?path=${card.path}`}
-                  className="bg-white rounded-lg shadow-md overflow-hidden"
-                >
-                  <div
-                    key={index}
-                    className="bg-white rounded-lg shadow-md overflow-hidden"
-                  >
-                    <img
-                      src={card.preview}
-                      alt={card.name}
-                      className="object-cover mx-auto"
-                    />
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold mb-2">
-                        {card.name}
-                      </h3>
-                      <p className="text-gray-600">{capitalize(card.group)}</p>
-                    </div>
-                  </div>
-                </Link>
-              ),
-            )}
+        {data?.initialContent && data?.file !== "" ? (
+          <div className="flex-1 p-6 overflow-y-auto">
+            <PreviewWeb
+              metadata={data?.metadata as Record<string, string>}
+              html={data?.initialContent || ""}
+              theme={theme as unknown as Record<string, string>}
+            />
           </div>
-        </div>
+        ) : null}
       </div>
     </div>
   );

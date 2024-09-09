@@ -76,10 +76,9 @@ const PreviewWeb = ({
   theme: Record<string, string>;
   metadata: Record<string, string>;
 }) => {
-  console.log(metadata);
   const wrapperClass = get(metadata, "previewWrapperClasses", "");
   return (
-    <div className="flex h-screen w-screen flex-col overflow-hidden bg-gray-100">
+    <div className="flex h-full w-full flex-col overflow-hidden bg-gray-100">
       <Frame
         className="no-scrollbar mx-auto w-full h-full overflow-y-auto"
         initialContent={IframeInitialContent(

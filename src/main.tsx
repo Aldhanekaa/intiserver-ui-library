@@ -4,7 +4,6 @@ import Builder from "./Builder.tsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home.tsx";
-import Preview from "./Preview.tsx";
 
 const router = createBrowserRouter([
   {
@@ -12,13 +11,8 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "try",
+    path: "builder",
     element: <Builder />,
-  },
-  {
-    path: "preview",
-    id: "preview",
-    element: <Preview />,
   },
 ]);
 
