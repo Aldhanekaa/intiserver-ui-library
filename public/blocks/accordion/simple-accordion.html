@@ -3,32 +3,34 @@ previewWrapperClasses: p-4 lg:p-16
 viewport:
     width: 600
 ---
-<div x-data="{currentOpenIndex: 0}" xmlns:x-on="http://www.w3.org/1999/xhtml">
-    <div class="hs-accordion active" id="hs-basic-heading-one">
+<div x-data="{currentOpenIndex: 0}">
+    <div>
         <button
-            x-on:click="currentOpenIndex = currentOpenIndex === 0 ? -1 : 0"
+            @click="currentOpenIndex = currentOpenIndex === 0 ? -1 : 0"
             class="py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start  focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-primary-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
             aria-expanded="currentOpenIndex === 0"
             :class="currentOpenIndex === 0 ? 'text-primary-600' : 'text-gray-800 hover:text-gray-500'"
             aria-controls="hs-basic-collapse-one">
-            <svg x-show="currentOpenIndex !== 0" class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5v14"></path>
-            </svg>
-            <svg x-show="currentOpenIndex === 0" class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-            </svg>
+            <span x-show="currentOpenIndex !== 0" >
+                <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5v14"></path>
+                </svg>
+            </span>
+            <span x-show="currentOpenIndex === 0" class="flex">
+                <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                </svg>
+            </span>
             Accordion #1
         </button>
         <div
             x-show="currentOpenIndex === 0" 
-            id="hs-basic-collapse-one"
-            class="w-full overflow-hidden transition-[height] duration-300" role="region"
-            aria-labelledby="hs-basic-heading-one">
+            class="w-full overflow-hidden transition-[height] duration-300" role="region">
             <p class="text-gray-800 dark:text-neutral-200">
                 <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin
                 adds the appropriate classes that we use to style each element. These classes control the overall
@@ -37,29 +39,32 @@ viewport:
         </div>
     </div>
 
-    <div class="hs-accordion" id="hs-basic-heading-two">
+    <div>
         <button
-            x-on:click="currentOpenIndex = currentOpenIndex === 1 ? -1 : 1"
+            @click="currentOpenIndex = currentOpenIndex === 1 ? -1 : 1"
             class="py-3 inline-flex items-center gap-x-3 w-full font-semibold text-start focus:outline-none focus:text-gray-500 rounded-lg disabled:opacity-50 disabled:pointer-events-none dark:hs-accordion-active:text-primary-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400"
             aria-expanded="currentOpenIndex === 0"
             :class="{currentOpenIndex === 1 ? 'text-primary-600' : 'text-gray-800 hover:text-gray-500'}"
-            aria-controls="hs-basic-collapse-two">
-            <svg x-show="currentOpenIndex !== 1" class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-                <path d="M12 5v14"></path>
-            </svg>
-            <svg x-show="currentOpenIndex === 1" class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14"></path>
-            </svg>
+            >
+            <span x-show="currentOpenIndex !== 1">
+                <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5v14"></path>
+                </svg>
+            </span>
+            <span x-show="currentOpenIndex === 1" class="flex">
+                <svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                </svg>
+            </span>
             Accordion #2
         </button>
-        <div x-show="currentOpenIndex === 1" id="hs-basic-collapse-two"
-            class="w-full overflow-hidden transition-[height] duration-300" role="region"
-            aria-labelledby="hs-basic-heading-two">
+        <div x-show="currentOpenIndex === 1"
+            class="w-full overflow-hidden transition-[height] duration-300" role="region">
             <p class="text-gray-800 dark:text-neutral-200">
                 <em>This is the third item's accordion body.</em> It is hidden by default, until the collapse plugin
                 adds the appropriate classes that we use to style each element. These classes control the overall
