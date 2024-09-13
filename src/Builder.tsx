@@ -1,8 +1,8 @@
 import "./chaibuilder.tailwind.css";
 import "@chaibuilder/sdk/styles";
 import { loadWebBlocks } from "@chaibuilder/sdk/web-blocks";
-import { ChaiBlock, ChaiBuilderEditor } from "@chaibuilder/sdk";
-import { getBlocksFromHTML } from "@chaibuilder/sdk/lib";
+import { ChaiBuilderEditor, getBlocksFromHTML } from "@chaibuilder/sdk";
+import type { ChaiBlock } from "@chaibuilder/sdk";
 import { Logo } from "./ChaiUILogo.tsx";
 
 loadWebBlocks();

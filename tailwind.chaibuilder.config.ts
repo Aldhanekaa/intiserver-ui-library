@@ -1,2 +1,2 @@
-import { chaiBuilderTailwindConfig } from "@chaibuilder/sdk/tailwind";
-export default chaiBuilderTailwindConfig(["./src/**/*.{js,ts,jsx,tsx}"]);
+import { getChaiBuilderTailwindConfig } from "@chaibuilder/sdk/tailwind";
+export default getChaiBuilderTailwindConfig(["./src/**/*.{js,ts,jsx,tsx}"]);
