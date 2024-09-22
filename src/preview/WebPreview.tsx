@@ -14,6 +14,17 @@ const getFonts = (options: Record<string, string>) => {
   `;
 };
 
+function extractBodyContent(html: string): string {
+  const bodyRegex = /<body[^>]*>([\s\S]*)<\/body>/i;
+  const match = html.match(bodyRegex);
+
+  if (match && match[1]) {
+    return match[1].trim();
+  }
+
+  return html;
+}
+
 export const IframeInitialContent = (
   fonts: string,
   html: string,
@@ -38,7 +49,7 @@ export const IframeInitialContent = (
   </head>
   <body class="font-body antialiased h-full">
     <div class="frame-root h-full ${wrapperClass}">
-    ${html}
+    ${extractBodyContent(html)}
     </div>  
     <script src="https://unpkg.com/alpinejs" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -80,13 +91,12 @@ const PreviewWeb = ({
   return (
     <div className="flex h-full w-full flex-col overflow-hidden bg-gray-100">
       <Frame
-        className="no-scrollbar mx-auto w-full h-full overflow-y-auto"
+        className="no-scrollbar mx-auto h-full w-full overflow-y-auto"
         initialContent={IframeInitialContent(
           getFonts(theme),
           html,
           wrapperClass,
-        )}
-      >
+        )}>
         <Settings theme={theme} />
       </Frame>
     </div>
