@@ -14,7 +14,7 @@ function Builder() {
         topBarComponents={{
           left: [Logo],
         }}
-        uiLibraries={[{ uuid: "Chai UI", name: "Chai UI", url: "/" }]}
+        uiLibraries={[{ uuid: "merakiui", name: "Meraki UI", url: "/" }]}
         // @ts-ignore
         getUILibraryBlock={async (uiLibrary: any, uiLibBlock: any) => {
           const response = await fetch("/blocks/" + uiLibBlock.path);
