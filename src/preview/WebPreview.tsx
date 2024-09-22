@@ -91,7 +91,7 @@ const PreviewWeb = ({
   return (
     <div className="flex h-full w-full flex-col overflow-hidden bg-gray-100">
       <Frame
-        className="no-scrollbar mx-auto h-full w-full overflow-y-auto"
+        className="no-scrollbar mx-auto h-full w-full overflow-y-auto border"
         initialContent={IframeInitialContent(
           getFonts(theme),
           html,

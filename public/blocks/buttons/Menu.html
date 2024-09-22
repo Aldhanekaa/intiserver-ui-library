@@ -1,6 +1,13 @@
+---
+previewWrapperClasses: p-20 w-fit
+viewport:
+  width: 440
+  height: 400
+---
+
 <div x-data="{ isOpen: true }" class="flex items-center">
   <button
-    class="px-4 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+    class="bg-primary-600 hover:bg-primary-500 focus:ring-primary-300 transform rounded-lg px-4 py-2 font-medium capitalize tracking-wide text-white transition-colors duration-300 focus:outline-none focus:ring focus:ring-opacity-80">
     Download
   </button>
 
@@ -10,9 +17,9 @@
     <!-- Menu toggle button -->
     <button
       @click="isOpen = !isOpen"
-      class="relative z-10 block p-2 transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+      class="bg-primary-600 hover:bg-primary-500 focus:ring-primary-300 relative z-10 block transform rounded-lg p-2 transition-colors duration-300 focus:outline-none focus:ring focus:ring-opacity-80">
       <svg
-        class="w-6 h-6 text-white"
+        class="h-6 w-6 text-white"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -29,27 +36,25 @@
     <div
       x-show="isOpen"
       @click.away="isOpen = false"
-      x-transition:enter="transition ease-out duration-100"
-      x-transition:enter-start="opacity-0 scale-90"
-      x-transition:enter-end="opacity-100 scale-100"
-      x-transition:leave="transition ease-in duration-100"
-      x-transition:leave-start="opacity-100 scale-100"
-      x-transition:leave-end="opacity-0 scale-90"
-      class="absolute right-0 z-20 w-48 mt-2 overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800">
+      x-transition
+      class="absolute right-0 z-20 mt-2 w-48 overflow-hidden rounded-lg bg-white shadow-xl dark:bg-gray-800">
       <a
         href="#"
-        class="block px-4 py-2 text-sm text-gray-800 transition-colors duration-300 transform border-b dark:text-gray-200 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700"
-        >small <span class="text-gray-600 dark:text-gray-400">(640x426)</span></a
+        class="block transform border-b px-4 py-2 text-sm text-gray-800 transition-colors duration-300 hover:bg-gray-100 dark:border-gray-500 dark:text-gray-200 dark:hover:bg-gray-700"
+        >small
+        <span class="text-gray-600 dark:text-gray-400">(640x426)</span></a
       >
       <a
         href="#"
-        class="block px-4 py-2 text-sm text-gray-800 transition-colors duration-300 transform border-b dark:text-gray-200 dark:border-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700"
-        >medium <span class="text-gray-600 dark:text-gray-400">(1920x1280)</span></a
+        class="block transform border-b px-4 py-2 text-sm text-gray-800 transition-colors duration-300 hover:bg-gray-100 dark:border-gray-500 dark:text-gray-200 dark:hover:bg-gray-700"
+        >medium
+        <span class="text-gray-600 dark:text-gray-400">(1920x1280)</span></a
       >
       <a
         href="#"
-        class="block px-4 py-2 text-sm text-gray-800 transition-colors duration-300 transform dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-        >large <span class="text-gray-600 dark:text-gray-400">(2400x1600)</span></a
+        class="block transform px-4 py-2 text-sm text-gray-800 transition-colors duration-300 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700"
+        >large
+        <span class="text-gray-600 dark:text-gray-400">(2400x1600)</span></a
       >
     </div>
   </div>
