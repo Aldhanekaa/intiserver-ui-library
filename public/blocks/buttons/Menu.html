@@ -1,13 +1,13 @@
 ---
-previewWrapperClasses: p-20 w-fit
+previewWrapperClasses: p-10 w-fit
 viewport:
-  width: 440
-  height: 400
+  width: 400
+  height: 800
 ---
 
 <div x-data="{ isOpen: true }" class="flex items-center">
   <button
-    class="bg-primary-600 hover:bg-primary-500 focus:ring-primary-300 transform rounded-lg px-4 py-2 font-medium capitalize tracking-wide text-white transition-colors duration-300 focus:outline-none focus:ring focus:ring-opacity-80">
+    class="bg-primary-600 hover:bg-primary-500 focus:ring-primary-300 transform rounded px-4 py-2 font-medium capitalize tracking-wide text-white transition-colors duration-300 focus:outline-none focus:ring focus:ring-opacity-80">
     Download
   </button>
 
@@ -17,7 +17,7 @@ viewport:
     <!-- Menu toggle button -->
     <button
       @click="isOpen = !isOpen"
-      class="bg-primary-600 hover:bg-primary-500 focus:ring-primary-300 relative z-10 block transform rounded-lg p-2 transition-colors duration-300 focus:outline-none focus:ring focus:ring-opacity-80">
+      class="bg-primary-600 hover:bg-primary-500 focus:ring-primary-300 relative z-10 block transform rounded p-2 transition-colors duration-300 focus:outline-none focus:ring focus:ring-opacity-80">
       <svg
         class="h-6 w-6 text-white"
         xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ viewport:
       x-show="isOpen"
       @click.away="isOpen = false"
       x-transition
-      class="absolute right-0 z-20 mt-2 w-48 overflow-hidden rounded-lg bg-white shadow-xl dark:bg-gray-800">
+      class="absolute right-0 z-20 mt-2 w-48 overflow-hidden rounded bg-white shadow-xl dark:bg-gray-800">
       <a
         href="#"
         class="block transform border-b px-4 py-2 text-sm text-gray-800 transition-colors duration-300 hover:bg-gray-100 dark:border-gray-500 dark:text-gray-200 dark:hover:bg-gray-700"
