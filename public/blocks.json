@@ -1206,48 +1206,6 @@
     "preview": "/preview/skeleton/skeleton-SpaceBetweenNavbar.jpg"
   },
   {
-    "group": "tables",
-    "uuid": "tables-Avatar",
-    "path": "tables/Avatar.html",
-    "name": "Avatar",
-    "preview": "/preview/tables/tables-Avatar.jpg"
-  },
-  {
-    "group": "tables",
-    "uuid": "tables-Empty",
-    "path": "tables/Empty.html",
-    "name": "Empty",
-    "preview": "/preview/tables/tables-Empty.jpg"
-  },
-  {
-    "group": "tables",
-    "uuid": "tables-Files",
-    "path": "tables/Files.html",
-    "name": "Files",
-    "preview": "/preview/tables/tables-Files.jpg"
-  },
-  {
-    "group": "tables",
-    "uuid": "tables-FiltersAndSearch",
-    "path": "tables/FiltersAndSearch.html",
-    "name": "Filters and search",
-    "preview": "/preview/tables/tables-FiltersAndSearch.jpg"
-  },
-  {
-    "group": "tables",
-    "uuid": "tables-Invoices",
-    "path": "tables/Invoices.html",
-    "name": "Invoices",
-    "preview": "/preview/tables/tables-Invoices.jpg"
-  },
-  {
-    "group": "tables",
-    "uuid": "tables-Simple",
-    "path": "tables/Simple.html",
-    "name": "Simple",
-    "preview": "/preview/tables/tables-Simple.jpg"
-  },
-  {
     "group": "tabs",
     "uuid": "tabs-EndClosed",
     "path": "tabs/EndClosed.html",
