@@ -972,28 +972,32 @@
     "uuid": "pagination-Arrows",
     "path": "pagination/Arrows.html",
     "name": "Arrows",
-    "preview": "/preview/pagination/pagination-Arrows.jpg"
+    "preview": "/preview/pagination/pagination-Arrows.jpg",
+    "section": false
   },
   {
     "group": "pagination",
     "uuid": "pagination-Icons",
     "path": "pagination/Icons.html",
     "name": "Icons",
-    "preview": "/preview/pagination/pagination-Icons.jpg"
+    "preview": "/preview/pagination/pagination-Icons.jpg",
+    "section": false
   },
   {
     "group": "pagination",
     "uuid": "pagination-Simple",
     "path": "pagination/Simple.html",
     "name": "Simple",
-    "preview": "/preview/pagination/pagination-Simple.jpg"
+    "preview": "/preview/pagination/pagination-Simple.jpg",
+    "section": false
   },
   {
     "group": "pagination",
     "uuid": "pagination-Table",
     "path": "pagination/Table.html",
     "name": "Table",
-    "preview": "/preview/pagination/pagination-Table.jpg"
+    "preview": "/preview/pagination/pagination-Table.jpg",
+    "section": false
   },
   {
     "group": "portfolio",
@@ -1080,67 +1084,12 @@
     "preview": "/preview/pricing/pricing-Simple.jpg"
   },
   {
-    "group": "sidebar",
-    "uuid": "sidebar-Avatar",
-    "path": "sidebar/Avatar.html",
-    "name": "Avatar",
-    "preview": "/preview/sidebar/sidebar-Avatar.jpg"
-  },
-  {
-    "group": "sidebar",
-    "uuid": "sidebar-BottomMenu",
-    "path": "sidebar/BottomMenu.html",
-    "name": "Bottom menu",
-    "preview": "/preview/sidebar/sidebar-BottomMenu.jpg"
-  },
-  {
-    "group": "sidebar",
-    "uuid": "sidebar-Collapse",
-    "path": "sidebar/Collapse.html",
-    "name": "Collapse",
-    "preview": "/preview/sidebar/sidebar-Collapse.jpg"
-  },
-  {
-    "group": "sidebar",
-    "uuid": "sidebar-LabelSection",
-    "path": "sidebar/LabelSection.html",
-    "name": "Label section",
-    "preview": "/preview/sidebar/sidebar-LabelSection.jpg"
-  },
-  {
-    "group": "sidebar",
-    "uuid": "sidebar-Search",
-    "path": "sidebar/Search.html",
-    "name": "Search",
-    "preview": "/preview/sidebar/sidebar-Search.jpg"
-  },
-  {
-    "group": "sidebar",
-    "uuid": "sidebar-SearchWithBottomCard",
-    "path": "sidebar/SearchWithBottomCard.html",
-    "name": "Search with bottom card",
-    "preview": "/preview/sidebar/sidebar-SearchWithBottomCard.jpg"
-  },
-  {
-    "group": "sidebar",
-    "uuid": "sidebar-SubMenu",
-    "path": "sidebar/SubMenu.html",
-    "name": "Sub menu",
-    "preview": "/preview/sidebar/sidebar-SubMenu.jpg"
-  },
-  {
-    "group": "sidebar",
-    "uuid": "sidebar-SubMenuWithLabelSection",
-    "path": "sidebar/SubMenuWithLabelSection.html",
-    "name": "Sub menu with label section",
-    "preview": "/preview/sidebar/sidebar-SubMenuWithLabelSection.jpg"
-  },
-  {
     "group": "sign-in-and-registration",
     "uuid": "sign-in-and-registration-SignInCard",
     "path": "sign-in-and-registration/SignInCard.html",
     "name": "Sign in card",
-    "preview": "/preview/sign-in-and-registration/sign-in-and-registration-SignInCard.jpg"
+    "preview": "/preview/sign-in-and-registration/sign-in-and-registration-SignInCard.jpg",
+    "section": false
   },
   {
     "group": "sign-in-and-registration",
@@ -1203,7 +1152,8 @@
     "uuid": "skeleton-Card",
     "path": "skeleton/Card.html",
     "name": "Card",
-    "preview": "/preview/skeleton/skeleton-Card.jpg"
+    "preview": "/preview/skeleton/skeleton-Card.jpg",
+    "section": false
   },
   {
     "group": "skeleton",
@@ -1238,7 +1188,8 @@
     "uuid": "skeleton-HeaderWithParagraph",
     "path": "skeleton/HeaderWithParagraph.html",
     "name": "Header with paragraph",
-    "preview": "/preview/skeleton/skeleton-HeaderWithParagraph.jpg"
+    "preview": "/preview/skeleton/skeleton-HeaderWithParagraph.jpg",
+    "section": false
   },
   {
     "group": "skeleton",
@@ -1301,28 +1252,32 @@
     "uuid": "tabs-EndClosed",
     "path": "tabs/EndClosed.html",
     "name": "End closed",
-    "preview": "/preview/tabs/tabs-EndClosed.jpg"
+    "preview": "/preview/tabs/tabs-EndClosed.jpg",
+    "section": false
   },
   {
     "group": "tabs",
     "uuid": "tabs-EndClosedWithIcons",
     "path": "tabs/EndClosedWithIcons.html",
     "name": "End closed with icons",
-    "preview": "/preview/tabs/tabs-EndClosedWithIcons.jpg"
+    "preview": "/preview/tabs/tabs-EndClosedWithIcons.jpg",
+    "section": false
   },
   {
     "group": "tabs",
     "uuid": "tabs-Line",
     "path": "tabs/Line.html",
     "name": "Line",
-    "preview": "/preview/tabs/tabs-Line.jpg"
+    "preview": "/preview/tabs/tabs-Line.jpg",
+    "section": false
   },
   {
     "group": "tabs",
     "uuid": "tabs-LineWithIcons",
     "path": "tabs/LineWithIcons.html",
     "name": "Line with icons",
-    "preview": "/preview/tabs/tabs-LineWithIcons.jpg"
+    "preview": "/preview/tabs/tabs-LineWithIcons.jpg",
+    "section": false
   },
   {
     "group": "teams",
@@ -1428,54 +1383,5 @@
     "path": "testimonials/Slider.html",
     "name": "Slider",
     "preview": "/preview/testimonials/testimonials-Slider.jpg"
-  },
-  {
-    "group": "tooltip",
-    "uuid": "tooltip-Bottom",
-    "path": "tooltip/Bottom.html",
-    "name": "Bottom",
-    "preview": "/preview/tooltip/tooltip-Bottom.jpg"
-  },
-  {
-    "group": "tooltip",
-    "uuid": "tooltip-Left",
-    "path": "tooltip/Left.html",
-    "name": "Left",
-    "preview": "/preview/tooltip/tooltip-Left.jpg"
-  },
-  {
-    "group": "tooltip",
-    "uuid": "tooltip-Right",
-    "path": "tooltip/Right.html",
-    "name": "Right",
-    "preview": "/preview/tooltip/tooltip-Right.jpg"
-  },
-  {
-    "group": "tooltip",
-    "uuid": "tooltip-Top",
-    "path": "tooltip/Top.html",
-    "name": "Top",
-    "preview": "/preview/tooltip/tooltip-Top.jpg"
-  },
-  {
-    "group": "tooltip",
-    "uuid": "tooltip-TopCenter",
-    "path": "tooltip/TopCenter.html",
-    "name": "Top center",
-    "preview": "/preview/tooltip/tooltip-TopCenter.jpg"
-  },
-  {
-    "group": "tooltip",
-    "uuid": "tooltip-TopLeft",
-    "path": "tooltip/TopLeft.html",
-    "name": "Top left",
-    "preview": "/preview/tooltip/tooltip-TopLeft.jpg"
-  },
-  {
-    "group": "tooltip",
-    "uuid": "tooltip-TopRight",
-    "path": "tooltip/TopRight.html",
-    "name": "Top right",
-    "preview": "/preview/tooltip/tooltip-TopRight.jpg"
   }
 ]

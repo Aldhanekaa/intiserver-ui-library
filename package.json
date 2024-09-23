@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:blocks": "node scripts/blocks-generator.js",
-    "build:previews": "node scripts/previews-generator.js"
+    "build:previews": "npm run build:blocks && node scripts/previews-generator.js",
+    "build:previews:all": "npm run build:blocks && node scripts/previews-generator.js --all"
   },
   "dependencies": {
     "@chaibuilder/runtime": "^0.2.8",

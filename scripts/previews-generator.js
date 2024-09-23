@@ -59,6 +59,7 @@ const extractJSONObject = (htmlContent) => {
   }
   return {};
 };
+
 // Read HTML file
 const readHtmlFile = async (filePath) => {
   const htmlContent = await fs.readFile(filePath, "utf-8");
@@ -163,9 +164,9 @@ const getViewport = (data) => {
 };
 
 // Main function
-const generatePreviews = async () => {
+const generatePreviews = async (processAll = false) => {
   const data = await readJsonFile(jsonFilePath);
-  const modifiedFiles = getModifiedAndNewFiles();
+  const modifiedFiles = processAll ? [] : getModifiedAndNewFiles();
 
   // Launch Puppeteer
   const browser = await puppeteer.launch({
@@ -182,13 +183,13 @@ const generatePreviews = async () => {
       continue;
     }
 
-    // // Check if the file has been modified
+    // Check if the file has been modified or if we're processing all files
     const blockFile = path.join(
       blocksDir,
       group,
       `${uuid.replace(group + "-", "")}.html`,
     );
-    if (!modifiedFiles.includes(blockFile)) {
+    if (!processAll && !modifiedFiles.includes(blockFile)) {
       continue;
     }
 
@@ -254,5 +255,8 @@ const generatePreviews = async () => {
   await browser.close();
 };
 
+// Check for --all argument
+const processAll = process.argv.includes("--all");
+
 // Run the main function
-generatePreviews().catch(console.error);
+generatePreviews(processAll).catch(console.error);
