@@ -47,7 +47,7 @@ export const IframeInitialContent = (
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
   </head>
   <body class="font-body antialiased h-full">
-    <div class="frame-root h-full ${wrapperClass}">
+    <div class="frame-root ${wrapperClass ? wrapperClass + " outline outline-1 outline-red-200 -outline-offset-1" : ""}">
     ${extractBodyContent(html)}
     </div>  
     <script src="https://unpkg.com/alpinejs" defer></script>
@@ -86,7 +86,7 @@ const PreviewWeb = ({
   theme: Record<string, string>;
   metadata: Record<string, string>;
 }) => {
-  const wrapperClass = get(metadata, "previewWrapperClasses", "");
+  const isPageSection = get(metadata, "section", true);
   return (
     <div className="flex h-full w-full flex-col overflow-hidden bg-gray-100">
       <Frame
@@ -94,7 +94,7 @@ const PreviewWeb = ({
         initialContent={IframeInitialContent(
           getFonts(theme),
           html,
-          wrapperClass,
+          isPageSection ? "" : "p-10 w-fit",
         )}>
         <Settings theme={theme} />
       </Frame>

@@ -64,8 +64,11 @@ const readHtmlFile = async (filePath) => {
   const htmlContent = await fs.readFile(filePath, "utf-8");
   const metaData = extractJSONObject(htmlContent);
   const html = htmlContent.replace(/---([\s\S]*?)---/g, "");
-  const wrapperClasses = get(metaData, "previewWrapperClasses", "");
-  return { html, wrapperClasses, ...getViewport(metaData) };
+  return {
+    html,
+    section: get(metaData, "section", true),
+    ...getViewport(metaData),
+  };
 };
 
 const getFonts = (options) => {
@@ -192,10 +195,9 @@ const generatePreviews = async () => {
     console.log("Generating preview for:" + uuid + ".html");
 
     // Read the HTML file
-    const { html, wrapperClasses, width, height } =
-      await readHtmlFile(blockFile);
+    const { html, section, width, height } = await readHtmlFile(blockFile);
     const htmlContent = wrapInsideHtml(
-      `<div id="root" class="${wrapperClasses}">${html}</div>`,
+      `<div id="root" class="${section ? "" : "p-10 w-fit"}">${html}</div>`,
     );
 
     // Set the viewport size to 1280px width
