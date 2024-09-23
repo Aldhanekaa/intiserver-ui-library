@@ -53,133 +53,152 @@
     "uuid": "alerts-ErrorFullWidth",
     "path": "alerts/ErrorFullWidth.html",
     "name": "Error full width",
-    "preview": "/preview/alerts/alerts-ErrorFullWidth.jpg"
+    "preview": "/preview/alerts/alerts-ErrorFullWidth.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-ErrorPop",
     "path": "alerts/ErrorPop.html",
     "name": "Error pop",
-    "preview": "/preview/alerts/alerts-ErrorPop.jpg"
+    "preview": "/preview/alerts/alerts-ErrorPop.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-InfoFullWidth",
     "path": "alerts/InfoFullWidth.html",
     "name": "Info full width",
-    "preview": "/preview/alerts/alerts-InfoFullWidth.jpg"
+    "preview": "/preview/alerts/alerts-InfoFullWidth.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-InfoPop",
     "path": "alerts/InfoPop.html",
     "name": "Info pop",
-    "preview": "/preview/alerts/alerts-InfoPop.jpg"
+    "preview": "/preview/alerts/alerts-InfoPop.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-NotificationPop",
     "path": "alerts/NotificationPop.html",
     "name": "Notification pop",
-    "preview": "/preview/alerts/alerts-NotificationPop.jpg"
+    "preview": "/preview/alerts/alerts-NotificationPop.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-SuccessFullWidth",
     "path": "alerts/SuccessFullWidth.html",
     "name": "Success full width",
-    "preview": "/preview/alerts/alerts-SuccessFullWidth.jpg"
+    "preview": "/preview/alerts/alerts-SuccessFullWidth.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-SuccessPop",
     "path": "alerts/SuccessPop.html",
     "name": "Success pop",
-    "preview": "/preview/alerts/alerts-SuccessPop.jpg"
+    "preview": "/preview/alerts/alerts-SuccessPop.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-WarningFullWidth",
     "path": "alerts/WarningFullWidth.html",
     "name": "Warning full width",
-    "preview": "/preview/alerts/alerts-WarningFullWidth.jpg"
+    "preview": "/preview/alerts/alerts-WarningFullWidth.jpg",
+    "section": false
   },
   {
     "group": "alerts",
     "uuid": "alerts-WarningPop",
     "path": "alerts/WarningPop.html",
     "name": "Warning pop",
-    "preview": "/preview/alerts/alerts-WarningPop.jpg"
+    "preview": "/preview/alerts/alerts-WarningPop.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-ActiveStatue",
     "path": "avatars/ActiveStatue.html",
     "name": "Active statue",
-    "preview": "/preview/avatars/avatars-ActiveStatue.jpg"
+    "preview": "/preview/avatars/avatars-ActiveStatue.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-ActiveStatuewithBorder",
     "path": "avatars/ActiveStatuewithBorder.html",
     "name": "Active statuewith border",
-    "preview": "/preview/avatars/avatars-ActiveStatuewithBorder.jpg"
+    "preview": "/preview/avatars/avatars-ActiveStatuewithBorder.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-Border",
     "path": "avatars/Border.html",
     "name": "Border",
-    "preview": "/preview/avatars/avatars-Border.jpg"
+    "preview": "/preview/avatars/avatars-Border.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-ExraLargeGroup",
     "path": "avatars/ExraLargeGroup.html",
     "name": "Exra large group",
-    "preview": "/preview/avatars/avatars-ExraLargeGroup.jpg"
+    "preview": "/preview/avatars/avatars-ExraLargeGroup.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-LargeGroup",
     "path": "avatars/LargeGroup.html",
     "name": "Large group",
-    "preview": "/preview/avatars/avatars-LargeGroup.jpg"
+    "preview": "/preview/avatars/avatars-LargeGroup.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-MediumGroup",
     "path": "avatars/MediumGroup.html",
     "name": "Medium group",
-    "preview": "/preview/avatars/avatars-MediumGroup.jpg"
+    "preview": "/preview/avatars/avatars-MediumGroup.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-Profile",
     "path": "avatars/Profile.html",
     "name": "Profile",
-    "preview": "/preview/avatars/avatars-Profile.jpg"
+    "preview": "/preview/avatars/avatars-Profile.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-ProfileSquare",
     "path": "avatars/ProfileSquare.html",
     "name": "Profile square",
-    "preview": "/preview/avatars/avatars-ProfileSquare.jpg"
+    "preview": "/preview/avatars/avatars-ProfileSquare.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-Simple",
     "path": "avatars/Simple.html",
     "name": "Simple",
-    "preview": "/preview/avatars/avatars-Simple.jpg"
+    "preview": "/preview/avatars/avatars-Simple.jpg",
+    "section": false
   },
   {
     "group": "avatars",
     "uuid": "avatars-SmallGroup",
     "path": "avatars/SmallGroup.html",
     "name": "Small group",
-    "preview": "/preview/avatars/avatars-SmallGroup.jpg"
+    "preview": "/preview/avatars/avatars-SmallGroup.jpg",
+    "section": false
   },
   {
     "group": "blog",
@@ -228,168 +247,192 @@
     "uuid": "breadcrumbs-Arrow",
     "path": "breadcrumbs/Arrow.html",
     "name": "Arrow",
-    "preview": "/preview/breadcrumbs/breadcrumbs-Arrow.jpg"
+    "preview": "/preview/breadcrumbs/breadcrumbs-Arrow.jpg",
+    "section": false
   },
   {
     "group": "breadcrumbs",
     "uuid": "breadcrumbs-FullWidth",
     "path": "breadcrumbs/FullWidth.html",
     "name": "Full width",
-    "preview": "/preview/breadcrumbs/breadcrumbs-FullWidth.jpg"
+    "preview": "/preview/breadcrumbs/breadcrumbs-FullWidth.jpg",
+    "section": false
   },
   {
     "group": "breadcrumbs",
     "uuid": "breadcrumbs-FullWidthWithIcons",
     "path": "breadcrumbs/FullWidthWithIcons.html",
     "name": "Full width with icons",
-    "preview": "/preview/breadcrumbs/breadcrumbs-FullWidthWithIcons.jpg"
+    "preview": "/preview/breadcrumbs/breadcrumbs-FullWidthWithIcons.jpg",
+    "section": false
   },
   {
     "group": "breadcrumbs",
     "uuid": "breadcrumbs-Icons",
     "path": "breadcrumbs/Icons.html",
     "name": "Icons",
-    "preview": "/preview/breadcrumbs/breadcrumbs-Icons.jpg"
+    "preview": "/preview/breadcrumbs/breadcrumbs-Icons.jpg",
+    "section": false
   },
   {
     "group": "breadcrumbs",
     "uuid": "breadcrumbs-Simple",
     "path": "breadcrumbs/Simple.html",
     "name": "Simple",
-    "preview": "/preview/breadcrumbs/breadcrumbs-Simple.jpg"
+    "preview": "/preview/breadcrumbs/breadcrumbs-Simple.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-Group",
     "path": "buttons/Group.html",
     "name": "Group",
-    "preview": "/preview/buttons/buttons-Group.jpg"
+    "preview": "/preview/buttons/buttons-Group.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-GroupIcons",
     "path": "buttons/GroupIcons.html",
     "name": "Group icons",
-    "preview": "/preview/buttons/buttons-GroupIcons.jpg"
+    "preview": "/preview/buttons/buttons-GroupIcons.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-GroupWithIcons",
     "path": "buttons/GroupWithIcons.html",
     "name": "Group with icons",
-    "preview": "/preview/buttons/buttons-GroupWithIcons.jpg"
+    "preview": "/preview/buttons/buttons-GroupWithIcons.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-Icon",
     "path": "buttons/Icon.html",
     "name": "Icon",
-    "preview": "/preview/buttons/buttons-Icon.jpg"
+    "preview": "/preview/buttons/buttons-Icon.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-Menu",
     "path": "buttons/Menu.html",
     "name": "Menu",
-    "preview": "/preview/buttons/buttons-Menu.jpg"
+    "preview": "/preview/buttons/buttons-Menu.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-Primary",
     "path": "buttons/Primary.html",
     "name": "Primary",
-    "preview": "/preview/buttons/buttons-Primary.jpg"
+    "preview": "/preview/buttons/buttons-Primary.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-SocialButtonGroup",
     "path": "buttons/SocialButtonGroup.html",
     "name": "Social button group",
-    "preview": "/preview/buttons/buttons-SocialButtonGroup.jpg"
+    "preview": "/preview/buttons/buttons-SocialButtonGroup.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-SocialButtonGroupColumn",
     "path": "buttons/SocialButtonGroupColumn.html",
     "name": "Social button group column",
-    "preview": "/preview/buttons/buttons-SocialButtonGroupColumn.jpg"
+    "preview": "/preview/buttons/buttons-SocialButtonGroupColumn.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-SocialButtonGroupColumnNoColor",
     "path": "buttons/SocialButtonGroupColumnNoColor.html",
     "name": "Social button group column no color",
-    "preview": "/preview/buttons/buttons-SocialButtonGroupColumnNoColor.jpg"
+    "preview": "/preview/buttons/buttons-SocialButtonGroupColumnNoColor.jpg",
+    "section": false
   },
   {
     "group": "buttons",
     "uuid": "buttons-SocialButtonGroupNoColor",
     "path": "buttons/SocialButtonGroupNoColor.html",
     "name": "Social button group no color",
-    "preview": "/preview/buttons/buttons-SocialButtonGroupNoColor.jpg"
+    "preview": "/preview/buttons/buttons-SocialButtonGroupNoColor.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-Article",
     "path": "cards/Article.html",
     "name": "Article",
-    "preview": "/preview/cards/cards-Article.jpg"
+    "preview": "/preview/cards/cards-Article.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-ArticleWithImage",
     "path": "cards/ArticleWithImage.html",
     "name": "Article with image",
-    "preview": "/preview/cards/cards-ArticleWithImage.jpg"
+    "preview": "/preview/cards/cards-ArticleWithImage.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-ArticleWithSMicons",
     "path": "cards/ArticleWithSMicons.html",
     "name": "Article with s micons",
-    "preview": "/preview/cards/cards-ArticleWithSMicons.jpg"
+    "preview": "/preview/cards/cards-ArticleWithSMicons.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-Product",
     "path": "cards/Product.html",
     "name": "Product",
-    "preview": "/preview/cards/cards-Product.jpg"
+    "preview": "/preview/cards/cards-Product.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-Product2",
     "path": "cards/Product2.html",
     "name": "Product2",
-    "preview": "/preview/cards/cards-Product2.jpg"
+    "preview": "/preview/cards/cards-Product2.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-ProductWithEvaluation",
     "path": "cards/ProductWithEvaluation.html",
     "name": "Product with evaluation",
-    "preview": "/preview/cards/cards-ProductWithEvaluation.jpg"
+    "preview": "/preview/cards/cards-ProductWithEvaluation.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-Testimonial",
     "path": "cards/Testimonial.html",
     "name": "Testimonial",
-    "preview": "/preview/cards/cards-Testimonial.jpg"
+    "preview": "/preview/cards/cards-Testimonial.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-User",
     "path": "cards/User.html",
     "name": "User",
-    "preview": "/preview/cards/cards-User.jpg"
+    "preview": "/preview/cards/cards-User.jpg",
+    "section": false
   },
   {
     "group": "cards",
     "uuid": "cards-UserWithDetails",
     "path": "cards/UserWithDetails.html",
     "name": "User with details",
-    "preview": "/preview/cards/cards-UserWithDetails.jpg"
+    "preview": "/preview/cards/cards-UserWithDetails.jpg",
+    "section": false
   },
   {
     "group": "contact",
@@ -483,48 +526,6 @@
     "preview": "/preview/contact/contact-TwoColumn.jpg"
   },
   {
-    "group": "cookies",
-    "uuid": "cookies-Banner",
-    "path": "cookies/Banner.html",
-    "name": "Banner",
-    "preview": "/preview/cookies/cookies-Banner.jpg"
-  },
-  {
-    "group": "cookies",
-    "uuid": "cookies-BannerWithActionButtons",
-    "path": "cookies/BannerWithActionButtons.html",
-    "name": "Banner with action buttons",
-    "preview": "/preview/cookies/cookies-BannerWithActionButtons.jpg"
-  },
-  {
-    "group": "cookies",
-    "uuid": "cookies-Card",
-    "path": "cookies/Card.html",
-    "name": "Card",
-    "preview": "/preview/cookies/cookies-Card.jpg"
-  },
-  {
-    "group": "cookies",
-    "uuid": "cookies-Card2",
-    "path": "cookies/Card2.html",
-    "name": "Card2",
-    "preview": "/preview/cookies/cookies-Card2.jpg"
-  },
-  {
-    "group": "cookies",
-    "uuid": "cookies-FullWidth",
-    "path": "cookies/FullWidth.html",
-    "name": "Full width",
-    "preview": "/preview/cookies/cookies-FullWidth.jpg"
-  },
-  {
-    "group": "cookies",
-    "uuid": "cookies-FullWidthWithActionButtons",
-    "path": "cookies/FullWidthWithActionButtons.html",
-    "name": "Full width with action buttons",
-    "preview": "/preview/cookies/cookies-FullWidthWithActionButtons.jpg"
-  },
-  {
     "group": "cta",
     "uuid": "cta-Card",
     "path": "cta/Card.html",
@@ -565,97 +566,6 @@
     "path": "cta/Simple.html",
     "name": "Simple",
     "preview": "/preview/cta/cta-Simple.jpg"
-  },
-  {
-    "group": "dropdowns",
-    "uuid": "dropdowns-MultiLevel",
-    "path": "dropdowns/MultiLevel.html",
-    "name": "Multi level",
-    "preview": "/preview/dropdowns/dropdowns-MultiLevel.jpg"
-  },
-  {
-    "group": "dropdowns",
-    "uuid": "dropdowns-MultiLevelWithIcons",
-    "path": "dropdowns/MultiLevelWithIcons.html",
-    "name": "Multi level with icons",
-    "preview": "/preview/dropdowns/dropdowns-MultiLevelWithIcons.jpg"
-  },
-  {
-    "group": "dropdowns",
-    "uuid": "dropdowns-Notification",
-    "path": "dropdowns/Notification.html",
-    "name": "Notification",
-    "preview": "/preview/dropdowns/dropdowns-Notification.jpg"
-  },
-  {
-    "group": "dropdowns",
-    "uuid": "dropdowns-Simple",
-    "path": "dropdowns/Simple.html",
-    "name": "Simple",
-    "preview": "/preview/dropdowns/dropdowns-Simple.jpg"
-  },
-  {
-    "group": "dropdowns",
-    "uuid": "dropdowns-User",
-    "path": "dropdowns/User.html",
-    "name": "User",
-    "preview": "/preview/dropdowns/dropdowns-User.jpg"
-  },
-  {
-    "group": "dropdowns",
-    "uuid": "dropdowns-UserWithIcons",
-    "path": "dropdowns/UserWithIcons.html",
-    "name": "User with icons",
-    "preview": "/preview/dropdowns/dropdowns-UserWithIcons.jpg"
-  },
-  {
-    "group": "email-templates",
-    "uuid": "email-templates-Invite",
-    "path": "email-templates/Invite.html",
-    "name": "Invite",
-    "preview": "/preview/email-templates/email-templates-Invite.jpg"
-  },
-  {
-    "group": "email-templates",
-    "uuid": "email-templates-News",
-    "path": "email-templates/News.html",
-    "name": "News",
-    "preview": "/preview/email-templates/email-templates-News.jpg"
-  },
-  {
-    "group": "email-templates",
-    "uuid": "email-templates-Notification",
-    "path": "email-templates/Notification.html",
-    "name": "Notification",
-    "preview": "/preview/email-templates/email-templates-Notification.jpg"
-  },
-  {
-    "group": "email-templates",
-    "uuid": "email-templates-NotificationWithImage",
-    "path": "email-templates/NotificationWithImage.html",
-    "name": "Notification with image",
-    "preview": "/preview/email-templates/email-templates-NotificationWithImage.jpg"
-  },
-  {
-    "group": "email-templates",
-    "uuid": "email-templates-Verification",
-    "path": "email-templates/Verification.html",
-    "name": "Verification",
-    "preview": "/preview/email-templates/email-templates-Verification.jpg"
-  },
-  {
-    "group": "email-templates",
-    "uuid": "email-templates-Welcome",
-    "path": "email-templates/Welcome.html",
-    "name": "Welcome",
-    "preview": "/preview/email-templates/email-templates-Welcome.jpg"
-  },
-  {
-    "group": "email-templates",
-    "uuid": "email-templates-WelcomeWithVideo",
-    "path": "email-templates/WelcomeWithVideo.html",
-    "name": "Welcome with video",
-    "preview": "/preview/email-templates/email-templates-WelcomeWithVideo.jpg"
   },
   {
     "group": "faq",
@@ -816,7 +726,8 @@
     "uuid": "forms-Newsletter",
     "path": "forms/Newsletter.html",
     "name": "Newsletter",
-    "preview": "/preview/forms/forms-Newsletter.jpg"
+    "preview": "/preview/forms/forms-Newsletter.jpg",
+    "section": false
   },
   {
     "group": "forms",
@@ -827,17 +738,11 @@
   },
   {
     "group": "forms",
-    "uuid": "forms-Search",
-    "path": "forms/Search.html",
-    "name": "Search",
-    "preview": "/preview/forms/forms-Search.jpg"
-  },
-  {
-    "group": "forms",
     "uuid": "forms-Simple",
     "path": "forms/Simple.html",
     "name": "Simple",
-    "preview": "/preview/forms/forms-Simple.jpg"
+    "preview": "/preview/forms/forms-Simple.jpg",
+    "section": false
   },
   {
     "group": "heros",
