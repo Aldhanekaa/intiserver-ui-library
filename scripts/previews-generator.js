@@ -185,9 +185,9 @@ const generatePreviews = async () => {
       group,
       `${uuid.replace(group + "-", "")}.html`,
     );
-    // if (!modifiedFiles.includes(blockFile)) {
-    //   continue;
-    // }
+    if (!modifiedFiles.includes(blockFile)) {
+      continue;
+    }
 
     console.log("Generating preview for:" + uuid + ".html");
 
@@ -233,7 +233,7 @@ const generatePreviews = async () => {
 
       // Compress further if necessary to ensure the image is under 50KB
       let quality = 80;
-      while (optimizedBuffer.length > 50000 && quality > 10) {
+      while (optimizedBuffer.length > 100000 && quality > 10) {
         quality -= 10;
         optimizedBuffer = await sharp(optimizedBuffer)
           .jpeg({ quality })

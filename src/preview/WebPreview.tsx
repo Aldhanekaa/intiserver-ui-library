@@ -42,7 +42,6 @@ export const IframeInitialContent = (
     html { height: 100%; overflow:auto; }
     body { height: 100%; }
     html{ -ms-overflow-style: none;  /* IE and Edge */ scrollbar-width: none;  /* Firefox */}
-    .frame-root .frame-content { height: 100%; }
     </style>   
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
