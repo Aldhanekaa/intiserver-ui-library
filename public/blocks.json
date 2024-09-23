@@ -826,133 +826,104 @@
     "uuid": "inputs-AddOn",
     "path": "inputs/AddOn.html",
     "name": "Add on",
-    "preview": "/preview/inputs/inputs-AddOn.jpg"
+    "preview": "/preview/inputs/inputs-AddOn.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-CardNumber",
     "path": "inputs/CardNumber.html",
     "name": "Card number",
-    "preview": "/preview/inputs/inputs-CardNumber.jpg"
+    "preview": "/preview/inputs/inputs-CardNumber.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-CustomFile",
     "path": "inputs/CustomFile.html",
     "name": "Custom file",
-    "preview": "/preview/inputs/inputs-CustomFile.jpg"
+    "preview": "/preview/inputs/inputs-CustomFile.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-Date",
     "path": "inputs/Date.html",
     "name": "Date",
-    "preview": "/preview/inputs/inputs-Date.jpg"
+    "preview": "/preview/inputs/inputs-Date.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-Disabled",
     "path": "inputs/Disabled.html",
     "name": "Disabled",
-    "preview": "/preview/inputs/inputs-Disabled.jpg"
+    "preview": "/preview/inputs/inputs-Disabled.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-EmailWithIcon",
     "path": "inputs/EmailWithIcon.html",
     "name": "Email with icon",
-    "preview": "/preview/inputs/inputs-EmailWithIcon.jpg"
+    "preview": "/preview/inputs/inputs-EmailWithIcon.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-EmailWithMessage",
     "path": "inputs/EmailWithMessage.html",
     "name": "Email with message",
-    "preview": "/preview/inputs/inputs-EmailWithMessage.jpg"
+    "preview": "/preview/inputs/inputs-EmailWithMessage.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-ErrorWithMessage",
     "path": "inputs/ErrorWithMessage.html",
     "name": "Error with message",
-    "preview": "/preview/inputs/inputs-ErrorWithMessage.jpg"
+    "preview": "/preview/inputs/inputs-ErrorWithMessage.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-File",
     "path": "inputs/File.html",
     "name": "File",
-    "preview": "/preview/inputs/inputs-File.jpg"
+    "preview": "/preview/inputs/inputs-File.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-PasswordWithShowIcon",
     "path": "inputs/PasswordWithShowIcon.html",
     "name": "Password with show icon",
-    "preview": "/preview/inputs/inputs-PasswordWithShowIcon.jpg"
+    "preview": "/preview/inputs/inputs-PasswordWithShowIcon.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-Simple",
     "path": "inputs/Simple.html",
     "name": "Simple",
-    "preview": "/preview/inputs/inputs-Simple.jpg"
+    "preview": "/preview/inputs/inputs-Simple.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-Textarea",
     "path": "inputs/Textarea.html",
     "name": "Textarea",
-    "preview": "/preview/inputs/inputs-Textarea.jpg"
+    "preview": "/preview/inputs/inputs-Textarea.jpg",
+    "section": false
   },
   {
     "group": "inputs",
     "uuid": "inputs-TextareaWithMessage",
     "path": "inputs/TextareaWithMessage.html",
     "name": "Textarea with message",
-    "preview": "/preview/inputs/inputs-TextareaWithMessage.jpg"
-  },
-  {
-    "group": "modals",
-    "uuid": "modals-Archive",
-    "path": "modals/Archive.html",
-    "name": "Archive",
-    "preview": "/preview/modals/modals-Archive.jpg"
-  },
-  {
-    "group": "modals",
-    "uuid": "modals-Confirm",
-    "path": "modals/Confirm.html",
-    "name": "Confirm",
-    "preview": "/preview/modals/modals-Confirm.jpg"
-  },
-  {
-    "group": "modals",
-    "uuid": "modals-Invite",
-    "path": "modals/Invite.html",
-    "name": "Invite",
-    "preview": "/preview/modals/modals-Invite.jpg"
-  },
-  {
-    "group": "modals",
-    "uuid": "modals-MultiInvites",
-    "path": "modals/MultiInvites.html",
-    "name": "Multi invites",
-    "preview": "/preview/modals/modals-MultiInvites.jpg"
-  },
-  {
-    "group": "modals",
-    "uuid": "modals-Steps",
-    "path": "modals/Steps.html",
-    "name": "Steps",
-    "preview": "/preview/modals/modals-Steps.jpg"
-  },
-  {
-    "group": "navbar",
-    "uuid": "navbar-simple-navbar-1",
-    "path": "navbar/simple-navbar-1.html",
-    "name": "Simple navbar 1",
-    "preview": "/preview/navbar/navbar-simple-navbar-1.jpg"
+    "preview": "/preview/inputs/inputs-TextareaWithMessage.jpg",
+    "section": false
   },
   {
     "group": "navbars",
