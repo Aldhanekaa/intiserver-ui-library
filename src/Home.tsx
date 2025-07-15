@@ -1,4 +1,3 @@
-import { Eye, Plus } from "lucide-react";
 import { useBlocks } from "./useBlocks.ts";
 import { capitalize, filter, isEmpty, uniq } from "lodash";
 import { useEffect, useMemo, useState } from "react";
